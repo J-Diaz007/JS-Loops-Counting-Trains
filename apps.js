@@ -7,6 +7,7 @@ let newInventoryYearBuilt = [1922, 2011, 1975, 2002, 1965, 1951]
 
 // USE WHILE LOOP TO ITERATE THROUGH CAR MODELS
 let i = 0
+
 while(i < newInventoryCarModels.length){
     console.log(`${newInventoryCarModels[i]} is of type: ${newInventoryCarTypes[i]}`)
     // Was missing the `${newInventoryCarModels[i]} is of type: ${newInventoryCarTypes[i]}` grabbed from solution code
@@ -14,5 +15,31 @@ while(i < newInventoryCarModels.length){
 }
 console.log()
 
+// DECLARE ITERATOR
+let x = 0
+
 //New variable called typeS1Count and initialize to 0
-let typeS1Count
+let typeS1Count = 0
+
+while(x < newInventoryCarModels.length){
+    if(newInventoryCarModels[x] === 'S1'){
+        typeS1Count++
+    }
+    x++
+}
+
+// RUN CODE COUNTING S1 CARS
+console.log(`Number of S1 Cars is: ${typeS1Count}`)
+
+// FOR LOOP WITH VARIABLE lorrieCount 
+let lorriesCount = 0 
+//  IF STATEMENT THAT CHECKS IF THE CAR MODEL IS "Lorrie"
+for(let i = 0; i < newInventoryCarModels.length; i++){
+    if(newInventoryCarTypes[i] === 'Lorrie'){
+        lorriesCount++
+    }
+}
+// AFTER LOOP IS CLOSED, CONSOLE LOG HOW MANY LORRIES ARE FOUND
+console.log(`There are ${lorriesCount} Lorries.` )
+
+
